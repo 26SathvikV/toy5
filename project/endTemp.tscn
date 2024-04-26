@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://b582jjp3bdlns"]
+
+[ext_resource type="Texture2D" uid="uid://cu81pxbc30rbc" path="res://kenney_1-bit-platformer-pack/Tiles/Default/tile_0000.png" id="1_11rub"]
+[ext_resource type="FontFile" uid="uid://bew7atjv8kh5w" path="res://Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="2_6biie"]
+[ext_resource type="Script" path="res://mainMenu.gd" id="4_jexb3"]
+
+[sub_resource type="Theme" id="Theme_o2cv0"]
+default_font = ExtResource("2_6biie")
+default_font_size = 50
+
+[sub_resource type="Theme" id="Theme_eh1h2"]
+default_base_scale = 25.0
+default_font = ExtResource("2_6biie")
+default_font_size = 25
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+scale = Vector2(337.688, 210.438)
+texture = ExtResource("1_11rub")
+
+[node name="tryAgainText" type="Label" parent="."]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -330.0
+offset_top = -250.0
+offset_right = 330.0
+offset_bottom = -190.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme = SubResource("Theme_o2cv0")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "This is the current end point for this game.
+Please stay tuned for future updates!"
+horizontal_alignment = 1
+
+[node name="mainMenu" type="Button" parent="."]
+layout_direction = 2
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = -50.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = SubResource("Theme_eh1h2")
+action_mode = 0
+text = "Main Menu
+"
+icon_alignment = 1
+script = ExtResource("4_jexb3")
+
+[node name="camera" type="Camera2D" parent="."]
+scale = Vector2(337.688, 210.438)
+
+[connection signal="button_down" from="mainMenu" to="mainMenu" method="_on_button_down"]

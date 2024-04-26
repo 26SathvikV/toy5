@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbmk8j8o4wmyd"]
+
+[ext_resource type="Texture2D" uid="uid://cu81pxbc30rbc" path="res://kenney_1-bit-platformer-pack/Tiles/Default/tile_0000.png" id="1_cwltg"]
+[ext_resource type="Script" path="res://charMovement.gd" id="2_0ihwq"]
+[ext_resource type="Texture2D" uid="uid://cub6fe7kofwer" path="res://char/left.png" id="2_cd5qr"]
+[ext_resource type="Texture2D" uid="uid://dapnc6qlptd3d" path="res://char/right.png" id="3_tmuu6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jshuc"]
+size = Vector2(92, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_25c2n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cd5qr")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tmuu6")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(577, 323.25)
+scale = Vector2(71.875, 40.4688)
+texture = ExtResource("1_cwltg")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_0ihwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(260, 471)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_jshuc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(256, 459)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_25c2n")
+animation = &"left"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 325)

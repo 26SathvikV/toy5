@@ -1,0 +1,478 @@
+[gd_scene load_steps=46 format=3 uid="uid://bb8kpvn2q14wi"]
+
+[ext_resource type="AudioStream" uid="uid://wrp5brxr4781" path="res://kenney_impact-sounds/Audio/footstep_concrete_003.ogg" id="1_ej0aj"]
+[ext_resource type="AudioStream" uid="uid://dg37b8od1nixa" path="res://kenney_impact-sounds/Audio/footstep_concrete_000.ogg" id="2_71826"]
+[ext_resource type="AudioStream" uid="uid://b5y15ip8ehhry" path="res://kenney_impact-sounds/Audio/footstep_concrete_002.ogg" id="3_nyds5"]
+[ext_resource type="AudioStream" uid="uid://bfwxs6d2wce8q" path="res://memoryGot.mp3" id="4_3us6f"]
+[ext_resource type="Script" path="res://infiniteParallaxBG.gd" id="4_503sm"]
+[ext_resource type="Texture2D" uid="uid://d1085ukcb1a0j" path="res://mountains.png" id="5_s6bfd"]
+[ext_resource type="AudioStream" uid="uid://b1b81vl44k0od" path="res://memoryInserted.mp3" id="5_up1uc"]
+[ext_resource type="AudioStream" uid="uid://6tg0m1k7itby" path="res://stonedooropen.mp3" id="6_426oc"]
+[ext_resource type="Texture2D" uid="uid://b0tyi8mjp127n" path="res://clouds.png" id="6_y63va"]
+[ext_resource type="Script" path="res://cloudMovement.gd" id="7_2obag"]
+[ext_resource type="Texture2D" uid="uid://c0k3nohw3bivf" path="res://sky.png" id="9_ip2b7"]
+[ext_resource type="Texture2D" uid="uid://bdetu21ao1mgv" path="res://ground.png" id="10_smldk"]
+[ext_resource type="Texture2D" uid="uid://chr5rem3udg1c" path="res://statue_lit.png" id="11_fvosm"]
+[ext_resource type="Texture2D" uid="uid://spck7r584vtl" path="res://eye.png" id="11_ua8gn"]
+[ext_resource type="Texture2D" uid="uid://b5b5na8v0g07t" path="res://statue_unlit.png" id="12_ed5xg"]
+[ext_resource type="Texture2D" uid="uid://uukyyva3uosc" path="res://door_closed.png" id="13_vay4p"]
+[ext_resource type="Texture2D" uid="uid://cf6x0s8l0jwrh" path="res://door_open.png" id="14_kssft"]
+[ext_resource type="Texture2D" uid="uid://qsrkk3nsg2p7" path="res://door_open1.png" id="15_dldgh"]
+[ext_resource type="Texture2D" uid="uid://icfehe0fufxk" path="res://door_open2.png" id="16_y15qq"]
+[ext_resource type="Texture2D" uid="uid://dqep70s3ql5i8" path="res://door_open3.png" id="17_bpdmw"]
+[ext_resource type="Texture2D" uid="uid://dnjgouko2ill2" path="res://door_open4.png" id="18_8pioo"]
+[ext_resource type="Texture2D" uid="uid://bxxxhy2a0onf5" path="res://door_open5.png" id="19_r02aq"]
+[ext_resource type="Texture2D" uid="uid://d06idgw6ch74u" path="res://door_open6.png" id="20_tupop"]
+[ext_resource type="Texture2D" uid="uid://cew01f4i8ittn" path="res://door_open7.png" id="21_5o7i3"]
+[ext_resource type="Texture2D" uid="uid://tqqg4qcaj0rb" path="res://door_open8.png" id="22_m5mvk"]
+[ext_resource type="Texture2D" uid="uid://b13wyj5npf7y2" path="res://door_open9.png" id="23_inrin"]
+[ext_resource type="Script" path="res://memory.gd" id="24_6y8fu"]
+[ext_resource type="Texture2D" uid="uid://bomsyonic8ib3" path="res://memory.png" id="25_kppf1"]
+[ext_resource type="Script" path="res://charMovement.gd" id="26_gsf5p"]
+[ext_resource type="Texture2D" uid="uid://cub6fe7kofwer" path="res://char/left.png" id="27_xfmrn"]
+[ext_resource type="Texture2D" uid="uid://dapnc6qlptd3d" path="res://char/right.png" id="28_dgx0a"]
+[ext_resource type="Script" path="res://cameraMovement.gd" id="29_o00l5"]
+[ext_resource type="FontFile" uid="uid://bew7atjv8kh5w" path="res://Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="30_ervb8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5547"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4hv7x"]
+texture = ExtResource("10_smldk")
+texture_region_size = Vector2i(250, 250)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jr5ah"]
+sources/1 = SubResource("TileSetAtlasSource_4hv7x")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cof4"]
+size = Vector2(1921, 240)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_refay"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_fvosm")
+}],
+"loop": true,
+"name": &"lit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ed5xg")
+}],
+"loop": true,
+"name": &"unlit",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvap2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w86mw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_vay4p")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_kssft")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_dldgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_y15qq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bpdmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8pioo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_r02aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tupop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_5o7i3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_m5mvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_inrin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kssft")
+}],
+"loop": true,
+"name": &"opening",
+"speed": 16.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3qh3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a0xyt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jshuc"]
+size = Vector2(92, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_25c2n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_xfmrn")
+}],
+"loop": true,
+"name": &"leftIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_xfmrn")
+}],
+"loop": true,
+"name": &"leftJump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_xfmrn")
+}],
+"loop": true,
+"name": &"leftMov",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_dgx0a")
+}],
+"loop": true,
+"name": &"rightIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_dgx0a")
+}],
+"loop": true,
+"name": &"rightJump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_dgx0a")
+}],
+"loop": true,
+"name": &"rightMov",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_msgnb"]
+default_font = ExtResource("30_ervb8")
+default_font_size = 25
+
+[node name="game" type="Node2D"]
+
+[node name="audio" type="Node" parent="."]
+
+[node name="jump" type="AudioStreamPlayer2D" parent="audio"]
+position = Vector2(580, 325)
+stream = ExtResource("1_ej0aj")
+
+[node name="land" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("2_71826")
+
+[node name="footstep" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("3_nyds5")
+
+[node name="get" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("4_3us6f")
+
+[node name="insert" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("5_up1uc")
+
+[node name="doorOpen" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("6_426oc")
+
+[node name="deathStatic" type="StaticBody2D" parent="."]
+position = Vector2(0, 850)
+scale = Vector2(1000, 12)
+
+[node name="deathCollision" type="CollisionShape2D" parent="deathStatic"]
+shape = SubResource("RectangleShape2D_q5547")
+
+[node name="bg" type="ParallaxBackground" parent="."]
+offset = Vector2(575, 200)
+scale = Vector2(1.5, 1.5)
+transform = Transform2D(1.5, 0, 0, 1.5, 575, 200)
+script = ExtResource("4_503sm")
+
+[node name="mountains" type="ParallaxLayer" parent="bg"]
+z_index = 3
+y_sort_enabled = true
+texture_repeat = 2
+scale = Vector2(0.125, 0.125)
+motion_scale = Vector2(1, 0.5)
+
+[node name="mountainsSprite" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("5_s6bfd")
+
+[node name="mountainsSprite2" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(-12500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("5_s6bfd")
+
+[node name="mountainsSprite3" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(12500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("5_s6bfd")
+
+[node name="mountainsSprite4" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(0, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("5_s6bfd")
+
+[node name="mountainsSprite5" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(-12500, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("5_s6bfd")
+
+[node name="mountainsSprite6" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(12500, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("5_s6bfd")
+
+[node name="clouds" type="ParallaxLayer" parent="bg"]
+z_index = 2
+y_sort_enabled = true
+scale = Vector2(0.125, 0.125)
+motion_scale = Vector2(1.5, 0.25)
+
+[node name="cloudsSprite" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="cloudsSprite2" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-12500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="cloudsSprite3" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(12500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="cloudsSprite7" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="cloudsSprite8" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(25000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="cloudsSprite9" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="cloudsSprite10" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(25000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="cloudsSprite4" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(0, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="cloudsSprite5" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-12500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="cloudsSprite6" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(12500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("6_y63va")
+script = ExtResource("7_2obag")
+
+[node name="moon" type="ParallaxLayer" parent="bg"]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.125, 0.125)
+motion_scale = Vector2(0.25, 0)
+
+[node name="moonSprite" type="Sprite2D" parent="bg/moon"]
+visibility_layer = 256
+z_index = 1
+texture = ExtResource("11_ua8gn")
+
+[node name="sky" type="ParallaxLayer" parent="bg"]
+y_sort_enabled = true
+motion_scale = Vector2(4, 4)
+motion_offset = Vector2(1, 0)
+
+[node name="skySprite" type="Sprite2D" parent="bg/sky"]
+visibility_layer = 512
+scale = Vector2(5, 1.25)
+texture = ExtResource("9_ip2b7")
+
+[node name="ground" type="TileMap" parent="."]
+position = Vector2(600, 550)
+tile_set = SubResource("TileSet_jr5ah")
+rendering_quadrant_size = 25
+format = 2
+layer_0/name = "ground"
+layer_0/z_index = 1
+layer_0/tile_data = PackedInt32Array(196565, 1, 0, 196580, 1, 0, 196595, 1, 0, 131074, 1, 0, 131089, 1, 0, 131104, 1, 0, 131119, 1, 0, 196550, 1, 0, 1179590, 65537, 0, 1179605, 65537, 0, 1179620, 65537, 0, 1179635, 65537, 0, 1114114, 65537, 0, 1114129, 65537, 0, 1114144, 65537, 0, 1114159, 65537, 0)
+
+[node name="tileStatic" type="StaticBody2D" parent="ground"]
+
+[node name="tileCollision" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(-81.5, 39)
+shape = SubResource("RectangleShape2D_4cof4")
+
+[node name="endStatue" type="Area2D" parent="."]
+position = Vector2(1080, 365)
+
+[node name="statueSprite" type="AnimatedSprite2D" parent="endStatue"]
+position = Vector2(0, -150)
+sprite_frames = SubResource("SpriteFrames_refay")
+animation = &"unlit"
+
+[node name="statueCollision" type="CollisionShape2D" parent="endStatue"]
+shape = SubResource("RectangleShape2D_fvap2")
+
+[node name="door" type="Area2D" parent="."]
+position = Vector2(1338, 365)
+
+[node name="doorSprite" type="AnimatedSprite2D" parent="door"]
+position = Vector2(1, -151)
+sprite_frames = SubResource("SpriteFrames_w86mw")
+animation = &"closed"
+
+[node name="doorCollision" type="CollisionShape2D" parent="door"]
+shape = SubResource("RectangleShape2D_s3qh3")
+
+[node name="memory" type="Area2D" parent="."]
+position = Vector2(836, 363)
+script = ExtResource("24_6y8fu")
+
+[node name="memorySprite" type="Sprite2D" parent="memory"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("25_kppf1")
+
+[node name="memoryShape" type="CollisionShape2D" parent="memory"]
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("CircleShape2D_a0xyt")
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(0, 325)
+script = ExtResource("26_gsf5p")
+
+[node name="playerCollision" type="CollisionShape2D" parent="player"]
+position = Vector2(9, 23)
+shape = SubResource("RectangleShape2D_jshuc")
+
+[node name="playerSprite" type="AnimatedSprite2D" parent="player"]
+sprite_frames = SubResource("SpriteFrames_25c2n")
+animation = &"leftJump"
+
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(580, 325)
+script = ExtResource("29_o00l5")
+
+[node name="tooltip" type="Label" parent="camera"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.5
+offset_top = -300.0
+offset_right = 108.5
+offset_bottom = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_msgnb")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="endStatue" to="player" method="_on_end_statue_body_entered"]
+[connection signal="body_exited" from="endStatue" to="player" method="_on_end_statue_body_exited"]
+[connection signal="body_entered" from="door" to="player" method="_on_door_body_entered"]
+[connection signal="body_exited" from="door" to="player" method="_on_door_body_exited"]
+[connection signal="animation_finished" from="door/doorSprite" to="player" method="_on_door_sprite_animation_finished"]
+[connection signal="area_entered" from="memory" to="player" method="_on_memory_area_entered"]
+[connection signal="body_entered" from="memory" to="player" method="_on_memory_body_entered"]
+[connection signal="body_exited" from="memory" to="player" method="_on_memory_body_exited"]

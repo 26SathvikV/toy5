@@ -1,0 +1,2354 @@
+[gd_scene load_steps=74 format=3 uid="uid://cxoc1t41jvdcp"]
+
+[ext_resource type="AudioStream" uid="uid://wrp5brxr4781" path="res://kenney_impact-sounds/Audio/footstep_concrete_003.ogg" id="1_mvmdo"]
+[ext_resource type="Script" path="res://followPlayer.gd" id="1_qmnan"]
+[ext_resource type="AudioStream" uid="uid://dg37b8od1nixa" path="res://kenney_impact-sounds/Audio/footstep_concrete_000.ogg" id="2_0nsea"]
+[ext_resource type="AudioStream" uid="uid://b5y15ip8ehhry" path="res://kenney_impact-sounds/Audio/footstep_concrete_002.ogg" id="3_ufrmq"]
+[ext_resource type="AudioStream" uid="uid://bfwxs6d2wce8q" path="res://memoryGot.mp3" id="4_xrwhk"]
+[ext_resource type="AudioStream" uid="uid://b1b81vl44k0od" path="res://memoryInserted.mp3" id="5_251c1"]
+[ext_resource type="AudioStream" uid="uid://6tg0m1k7itby" path="res://stonedooropen.mp3" id="6_st44m"]
+[ext_resource type="AudioStream" uid="uid://8hqtr2ksingq" path="res://save.mp3" id="7_ag04j"]
+[ext_resource type="Script" path="res://infiniteParallaxBG.gd" id="7_tgtd1"]
+[ext_resource type="Texture2D" uid="uid://d1085ukcb1a0j" path="res://mountains.png" id="8_f5n6s"]
+[ext_resource type="Texture2D" uid="uid://b0tyi8mjp127n" path="res://clouds.png" id="9_xnujr"]
+[ext_resource type="Script" path="res://cloudMovement.gd" id="10_h2e3i"]
+[ext_resource type="Texture2D" uid="uid://spck7r584vtl" path="res://eye.png" id="12_5xcsi"]
+[ext_resource type="Texture2D" uid="uid://c0k3nohw3bivf" path="res://sky.png" id="12_f6l76"]
+[ext_resource type="Texture2D" uid="uid://bdetu21ao1mgv" path="res://ground.png" id="13_v5toa"]
+[ext_resource type="Texture2D" uid="uid://lfii8nta1c62" path="res://statue_save.png" id="14_xybyv"]
+[ext_resource type="Texture2D" uid="uid://c7x1i0h8iwo76" path="res://bricks.png" id="15_ost3c"]
+[ext_resource type="Texture2D" uid="uid://b5b5na8v0g07t" path="res://statue_unlit.png" id="15_tfnis"]
+[ext_resource type="Texture2D" uid="uid://uukyyva3uosc" path="res://door_closed.png" id="16_mhqay"]
+[ext_resource type="Texture2D" uid="uid://cf6x0s8l0jwrh" path="res://door_open.png" id="17_jgofe"]
+[ext_resource type="Texture2D" uid="uid://qsrkk3nsg2p7" path="res://door_open1.png" id="18_yf3jk"]
+[ext_resource type="Texture2D" uid="uid://icfehe0fufxk" path="res://door_open2.png" id="19_drdcl"]
+[ext_resource type="Texture2D" uid="uid://dqep70s3ql5i8" path="res://door_open3.png" id="20_v1gds"]
+[ext_resource type="Texture2D" uid="uid://dnjgouko2ill2" path="res://door_open4.png" id="21_a82v1"]
+[ext_resource type="Texture2D" uid="uid://bxxxhy2a0onf5" path="res://door_open5.png" id="22_1xvqo"]
+[ext_resource type="Texture2D" uid="uid://d06idgw6ch74u" path="res://door_open6.png" id="23_jnmhp"]
+[ext_resource type="Texture2D" uid="uid://cew01f4i8ittn" path="res://door_open7.png" id="24_csnmg"]
+[ext_resource type="Texture2D" uid="uid://tqqg4qcaj0rb" path="res://door_open8.png" id="25_blncr"]
+[ext_resource type="Texture2D" uid="uid://b13wyj5npf7y2" path="res://door_open9.png" id="26_mfnlw"]
+[ext_resource type="Script" path="res://memory.gd" id="27_lbtkm"]
+[ext_resource type="Texture2D" uid="uid://bomsyonic8ib3" path="res://memory.png" id="28_cwpnq"]
+[ext_resource type="Script" path="res://charMovement.gd" id="29_2wvkg"]
+[ext_resource type="Texture2D" uid="uid://cub6fe7kofwer" path="res://char/left.png" id="30_ufr1g"]
+[ext_resource type="Texture2D" uid="uid://dapnc6qlptd3d" path="res://char/right.png" id="31_3laud"]
+[ext_resource type="Script" path="res://cameraMovement.gd" id="32_7fl4r"]
+[ext_resource type="FontFile" uid="uid://bew7atjv8kh5w" path="res://Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="33_xtmub"]
+[ext_resource type="Texture2D" uid="uid://khghtb2dnd3g" path="res://statue_ch1.png" id="35_eqq4v"]
+[ext_resource type="Texture2D" uid="uid://uaq6dryxd6y" path="res://cycle.png" id="37_l5jsj"]
+[ext_resource type="Script" path="res://cycle.gd" id="38_m38bd"]
+[ext_resource type="Texture2D" uid="uid://c1a6kmetp68mq" path="res://cycleArrow.png" id="38_qh3kx"]
+[ext_resource type="Texture2D" uid="uid://0jeqlnln8xbl" path="res://medallion.png" id="40_e6a35"]
+[ext_resource type="Script" path="res://medallion.gd" id="41_4dn0j"]
+[ext_resource type="Texture2D" uid="uid://spqxalfd8uj" path="res://nightButton.png" id="41_rdr5p"]
+[ext_resource type="Texture2D" uid="uid://cag4yvrxeq8fb" path="res://dayButton.png" id="42_lrdew"]
+[ext_resource type="Script" path="res://nButton.gd" id="44_4gwd4"]
+[ext_resource type="Texture2D" uid="uid://be7d8v4c7bhf2" path="res://jumppad.png" id="44_f2cwd"]
+[ext_resource type="Script" path="res://dButton.gd" id="46_64rlj"]
+[ext_resource type="Script" path="res://jumppad.gd" id="46_xnuw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orsnf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y88g0"]
+texture = ExtResource("13_v5toa")
+texture_region_size = Vector2i(50, 50)
+0:0/size_in_atlas = Vector2i(5, 5)
+0:0/0 = 0
+5:0/size_in_atlas = Vector2i(5, 5)
+5:0/0 = 0
+0:5/size_in_atlas = Vector2i(5, 5)
+0:5/0 = 0
+5:5/size_in_atlas = Vector2i(5, 5)
+5:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cw2sa"]
+texture = ExtResource("15_ost3c")
+texture_region_size = Vector2i(250, 250)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_eaotr"]
+sources/0 = SubResource("TileSetAtlasSource_y88g0")
+sources/1 = SubResource("TileSetAtlasSource_cw2sa")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyysv"]
+size = Vector2(967, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gng0m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_45yc7"]
+texture = ExtResource("13_v5toa")
+texture_region_size = Vector2i(250, 250)
+0:0/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_462ap"]
+sources/0 = SubResource("TileSetAtlasSource_45yc7")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7g7h"]
+size = Vector2(20, 19.9643)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_480aw"]
+texture = ExtResource("13_v5toa")
+texture_region_size = Vector2i(250, 250)
+0:0/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g1w8k"]
+sources/0 = SubResource("TileSetAtlasSource_480aw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vk141"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_514ti"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_xybyv")
+}],
+"loop": true,
+"name": &"lit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_tfnis")
+}],
+"loop": true,
+"name": &"unlit",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qthi1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7cwvq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_mhqay")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_jgofe")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_yf3jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_drdcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_v1gds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_a82v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1xvqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_jnmhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_csnmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_blncr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mfnlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jgofe")
+}],
+"loop": true,
+"name": &"opening",
+"speed": 16.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3srkq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l3f4a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ij7wv"]
+size = Vector2(92, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0mih8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_ufr1g")
+}],
+"loop": true,
+"name": &"leftIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_ufr1g")
+}],
+"loop": true,
+"name": &"leftJump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_ufr1g")
+}],
+"loop": true,
+"name": &"leftMov",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_3laud")
+}],
+"loop": true,
+"name": &"rightIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_3laud")
+}],
+"loop": true,
+"name": &"rightJump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_3laud")
+}],
+"loop": true,
+"name": &"rightMov",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_pnj82"]
+default_font = ExtResource("33_xtmub")
+default_font_size = 25
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8pdhr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1cwlm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o3gys"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ixk0p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4jkk"]
+size = Vector2(300, 300)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="audio" type="Node" parent="."]
+script = ExtResource("1_qmnan")
+
+[node name="jump" type="AudioStreamPlayer2D" parent="audio"]
+position = Vector2(580, 325)
+stream = ExtResource("1_mvmdo")
+
+[node name="land" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("2_0nsea")
+
+[node name="footstep" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("3_ufrmq")
+
+[node name="get" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("4_xrwhk")
+
+[node name="insert" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("5_251c1")
+
+[node name="doorOpen" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("6_st44m")
+
+[node name="save" type="AudioStreamPlayer2D" parent="audio"]
+stream = ExtResource("7_ag04j")
+
+[node name="deathStatic" type="StaticBody2D" parent="."]
+position = Vector2(0, 850)
+scale = Vector2(2500, 12)
+
+[node name="deathCollision" type="CollisionShape2D" parent="deathStatic"]
+shape = SubResource("RectangleShape2D_orsnf")
+
+[node name="bg" type="ParallaxBackground" parent="."]
+offset = Vector2(575, 200)
+scale = Vector2(1.5, 1.5)
+transform = Transform2D(1.5, 0, 0, 1.5, 575, 200)
+script = ExtResource("7_tgtd1")
+
+[node name="mountains" type="ParallaxLayer" parent="bg"]
+z_index = 3
+y_sort_enabled = true
+texture_repeat = 2
+scale = Vector2(0.125, 0.125)
+motion_scale = Vector2(1, 0.5)
+
+[node name="mountainsSprite" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite2" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(-12500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite3" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(12500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite7" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(25000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite8" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(37500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite9" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(50000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite10" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(62500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite11" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(75000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite12" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(87500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite13" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(100000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite14" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(25000, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite15" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(37500, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite16" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(50000, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite17" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(62500, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite18" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(75000, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite19" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(87500, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite20" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(100000, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite4" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(0, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite5" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(-12500, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="mountainsSprite6" type="Sprite2D" parent="bg/mountains"]
+z_index = 3
+texture_repeat = 3
+position = Vector2(12500, 6250)
+rotation = 3.14159
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("8_f5n6s")
+
+[node name="clouds" type="ParallaxLayer" parent="bg"]
+z_index = 2
+y_sort_enabled = true
+scale = Vector2(0.125, 0.125)
+motion_scale = Vector2(1.5, 0.25)
+
+[node name="cloudsSprite1" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite2" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-12500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite3" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(12500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite7" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite8" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(25000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite9" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite10" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(25000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite11" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(37500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite12" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(37500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite13" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(50000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite14" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(50000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite15" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(62500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite16" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(62500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite17" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(75000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite18" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(75000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite19" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(87500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite20" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(87500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite21" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(100000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite22" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(100000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite23" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(112500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite24" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(112500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite25" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(125000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite26" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(125000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite27" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(137500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite28" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(137500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite29" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(150000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite30" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(150000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite31" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(162500, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite32" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(162500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite33" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(175000, 0)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite34" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(175000, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite4" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(0, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite5" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-12500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite6" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(12500, -6000)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite35" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-360.667, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite36" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-12860.7, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite37" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(12139.3, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite38" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25360.7, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite39" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(24639.3, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite40" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25360.7, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite41" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(24639.3, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite42" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(37139.3, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite43" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(37139.3, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite44" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(49639.3, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite45" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(49639.3, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite46" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(62139.3, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite47" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(62139.3, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite48" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(74639.3, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite49" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(74639.3, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite50" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(87139.3, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite51" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(87139.3, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite52" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(99639.3, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite53" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(99639.3, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite54" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(112139, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite55" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(112139, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite56" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(124639, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite57" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(124639, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite58" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(137139, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite59" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(137139, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite60" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(149639, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite61" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(149639, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite62" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(162139, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite63" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(162139, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite64" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(174639, -11755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite65" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(174639, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite66" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-360.667, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite67" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-12860.7, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite68" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(12139.3, -17755)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite69" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-360.667, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite70" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-12860.7, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite71" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(12139.3, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite72" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25360.7, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite73" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(24639.3, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite74" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25360.7, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite75" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(24639.3, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite76" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(37139.3, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite77" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(37139.3, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite78" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(49639.3, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite79" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(49639.3, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite80" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(62139.3, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite81" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(62139.3, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite82" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(74639.3, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite83" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(74639.3, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite84" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(87139.3, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite85" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(87139.3, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite86" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(99639.3, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite87" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(99639.3, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite88" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(112139, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite89" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(112139, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite90" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(124639, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite91" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(124639, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite92" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(137139, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite93" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(137139, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite94" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(149639, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite95" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(149639, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite96" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(162139, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite97" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(162139, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite98" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(174639, -23808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite99" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(174639, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite100" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-360.667, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite101" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-12860.7, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite102" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(12139.3, -29808.3)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite103" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-648.667, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite104" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-13148.7, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite105" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(11851.3, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite106" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25648.7, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite107" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(24351.3, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite108" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-25648.7, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite109" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(24351.3, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite110" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(36851.3, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite111" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(36851.3, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite112" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(49351.3, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite113" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(49351.3, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite114" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(61851.3, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite115" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(61851.3, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite116" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(74351.3, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite117" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(74351.3, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite118" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(86851.3, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite119" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(86851.3, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite120" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(99351.3, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite121" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(99351.3, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite122" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(111851, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite123" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(111851, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite124" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(124351, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite125" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(124351, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite126" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(136851, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite127" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(136851, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite128" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(149351, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite129" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(149351, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite130" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(161851, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite131" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(161851, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite132" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(174351, -36149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite133" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(174351, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite134" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-648.667, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite135" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(-13148.7, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="cloudsSprite136" type="Sprite2D" parent="bg/clouds"]
+visibility_layer = 128
+z_index = 2
+texture_repeat = 2
+position = Vector2(11851.3, -42149.7)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("9_xnujr")
+script = ExtResource("10_h2e3i")
+
+[node name="moon" type="ParallaxLayer" parent="bg"]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.125, 0.125)
+motion_scale = Vector2(0.25, 0)
+
+[node name="moonSprite" type="Sprite2D" parent="bg/moon"]
+visibility_layer = 256
+z_index = 1
+texture = ExtResource("12_5xcsi")
+
+[node name="sky" type="ParallaxLayer" parent="bg"]
+y_sort_enabled = true
+motion_scale = Vector2(0, 4)
+motion_offset = Vector2(1, 0)
+
+[node name="skySprite" type="Sprite2D" parent="bg/sky"]
+visibility_layer = 512
+scale = Vector2(10, 10)
+texture = ExtResource("12_f6l76")
+
+[node name="ground" type="TileMap" parent="."]
+position = Vector2(600, 550)
+tile_set = SubResource("TileSet_eaotr")
+rendering_quadrant_size = 25
+format = 2
+layer_0/name = "ground"
+layer_0/z_index = 1
+layer_0/tile_data = PackedInt32Array(196565, 0, 0, 196580, 0, 0, 196595, 0, 0, 196550, 0, 0, 1179590, 327680, 0, 1179605, 327680, 0, 1179620, 327680, 0, 1179635, 327680, 0, 1114129, 327680, 0, 131089, 327680, 0, -851951, 0, 0, -851936, 0, 0, 131104, 327680, 0, 1114144, 327680, 0, 1114209, 327680, 0, 1114224, 327680, 0, 131169, 327680, 0, 131184, 327680, 0, -1769360, 0, 0, -851856, 327680, 0, -851871, 0, 0, -1769328, 0, 0, -2293581, 0, 0, -1572652, 0, 0, -786288, 327680, 0, 196752, 327680, 0, 1179792, 327680, 0, -1310541, 327680, 0, -327501, 327680, 0, 655539, 327680, 0, 1638579, 327680, 0, -589612, 327680, 0, 393428, 327680, 0, 1376468, 327680, 0, 1376483, 327680, 0, 393443, 327680, 0, -589597, 327680, 0, -1572637, 327680, 0, -2555677, 327680, 0, -3473181, 0, 0, -4521709, 0, 0, -4521694, 0, 0, -3538669, 327680, 0, -3538654, 327680, 0, -2621165, 327680, 0, -2621150, 327680, 0, -1638110, 327680, 0, -655070, 327680, 0, 327970, 327680, 0, 1311010, 327680, 0, 1310995, 327680, 0, 327955, 327680, 0, -655085, 327680, 0, -1638125, 327680, 0, -3800749, 0, 0, -3800734, 0, 0, -2817694, 327680, 0, -1834654, 327680, 0, -851614, 327680, 0, 131426, 327680, 0, 1114466, 327680, 0, 1114451, 327680, 0, -1834669, 327680, 0, -851629, 327680, 0, 131411, 327680, 0, -3210864, 65537, 0, -3210849, 65537, 0, -3210834, 65537, 0, -3210819, 65537, 0, -3210804, 65537, 0, -3210789, 65537, 0, -4193904, 1, 1, -4193889, 1, 1, -4193874, 1, 1, -4193829, 1, 1, -4193844, 1, 1, -4193859, 1, 1, -5176944, 1, 1, -5176929, 1, 1, -5176914, 1, 1, -5176899, 1, 1, -5176884, 1, 1, -5176869, 1, 1, -6159984, 65537, 0, -6159969, 65537, 0, -6159954, 65537, 0, -6159939, 65537, 0, -6159924, 65537, 0, -6159909, 65537, 0, -4783774, 327680, 5, -5766814, 327680, 5, -6749854, 327680, 5, -7732894, 0, 0, -4783789, 327680, 5, -5766829, 327680, 5, -7732909, 0, 0, -6749869, 327680, 5, -2227824, 1, 0, -1244784, 1, 0, 721296, 1, 0, -261744, 1, 0, 721311, 1, 0, 721326, 1, 0, 721341, 1, 0, 721356, 1, 0, 721371, 1, 0, -261669, 1, 0, -1244709, 1, 0, -2227749, 1, 0, -2227764, 1, 0, -2227779, 1, 0, -2227794, 1, 0, -2227809, 1, 0, -1244769, 1, 0, -261729, 1, 0, -261714, 1, 0, -261699, 1, 0, -261684, 1, 0, -1244724, 1, 0, -1244739, 1, 0, -1244754, 1, 0, -2817709, 327680, 0, -3145211, 0, 0, -3145196, 0, 0, -2162171, 327680, 0, -2162156, 327680, 0, -1179116, 327680, 0, -1179131, 327680, 0, -196091, 327680, 0, -196076, 327680, 0, 786964, 327680, 0, 786949, 327680, 0, -6618225, 1, 0, -6618210, 1, 0, -6618195, 1, 0, -6618180, 1, 0, -6618165, 1, 0, -6618150, 1, 0, -6618135, 1, 0, -7601265, 1, 1, -8584305, 1, 1, -9567345, 1, 1, -7601250, 1, 1, -7601235, 1, 1, -7601220, 1, 1, -7601205, 1, 1, -7601190, 1, 1, -7601175, 1, 0, -8584215, 1, 0, -9567255, 1, 0, -8584290, 1, 1, -8584275, 1, 1, -8584260, 1, 1, -8584245, 1, 1, -8584230, 1, 1, -9567270, 1, 1, -9567285, 1, 1, -9567300, 1, 1, -9567315, 1, 1, -9567330, 1, 1, -10550385, 65537, 0, -10550370, 65537, 0, -10550355, 65537, 0, -10550340, 65537, 0, -10550325, 65537, 0, -10550310, 65537, 0, -10550295, 65537, 0, -8781485, 327680, 5, -8781470, 327680, 5, -9764525, 327680, 5, -9764510, 327680, 5, -10747565, 0, 0, -10747550, 0, 0, -7143024, 0, 0, -7143009, 0, 0, -7142994, 0, 0, -7142979, 327680, 0, -7142964, 327680, 0, -7142949, 327680, 0, -8126019, 327680, 0, -8126004, 327680, 0, -9109059, 327680, 0, -9109044, 327680, 0, -8125989, 327680, 0, -9109029, 327680, 0, -10092084, 327680, 0, -11075124, 327680, 0, -10092069, 327680, 0, -11075109, 327680, 0, -12058149, 327680, 0, -10092099, 0, 0, -12058164, 0, 0, -13041189, 0, 0, -8191600, 327680, 5, -8191585, 327680, 5, -9174625, 327680, 5, -9174640, 327680, 5, -10157680, 327680, 5, -10157665, 327680, 5, -11140720, 327680, 5, -11140705, 327680, 5, -12123760, 327680, 5, -12123745, 327680, 5, -13106800, 0, 0, -13106785, 0, 0, -10747614, 327680, 0, -10747628, 327680, 0, -9764588, 327680, 0, -9764603, 327680, 0, -10747643, 327680, 0, -10747658, 327680, 0, -11730698, 0, 0, -11730683, 0, 0, -11730668, 0, 0, -11730654, 0, 0, -9961475, 0, 0, -10026996, 0, 0, -8978435, 327680, 0, -9043956, 327680, 0, -9043941, 327680, 0, -8060901, 327680, 0, -8060916, 327680, 0, -10026981, 0, 0, -10551209, 0, 0, -10551194, 0, 0, -10551179, 0, 0, -11534204, 0, 0, -11534189, 0, 0, -10551164, 327680, 0, -10551149, 327680, 0, -9568169, 327680, 0, -9568154, 327680, 0, -9568139, 327680, 0, -9568124, 327680, 0, -9568109, 327680, 0, -8585084, 327680, 0, -8585099, 327680, 0, -8585114, 327680, 0, -7602059, 327680, 0, -10944317, 0, 0, -9961277, 327680, 0)
+
+[node name="tileStatic" type="StaticBody2D" parent="ground"]
+
+[node name="tileCollision" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(-558.5, 39)
+shape = SubResource("RectangleShape2D_dyysv")
+
+[node name="tileCollision2" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(400, 0)
+scale = Vector2(24.5, 32.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision3" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(1675, 0)
+scale = Vector2(24.5, 32.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision4" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(1800, -225)
+scale = Vector2(12.25, 32.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision5" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(2315, -174)
+scale = Vector2(12.25, 37.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision6" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(2875, -174)
+scale = Vector2(12.25, 50)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision7" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(3400, 0)
+scale = Vector2(12.25, 50)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision8" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(3650, -265)
+scale = Vector2(12.25, 70)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision9" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(4525, -525)
+scale = Vector2(25, 70)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision10" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(5550, -425)
+scale = Vector2(25, 62.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision11" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(5550, -1885)
+scale = Vector2(25, 12)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision12" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(7007.5, -275)
+scale = Vector2(72.5, 62.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision13" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(7007.5, -1500)
+scale = Vector2(72.5, 12)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision14" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(8400, -275)
+scale = Vector2(25, 60)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision15" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(7368, -2302)
+scale = Vector2(12.5, 75)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision16" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(7611, -2416)
+scale = Vector2(12.5, 87.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision17" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(7123, -2077)
+scale = Vector2(12.5, 50)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision18" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(5554, -2601)
+scale = Vector2(25, 12)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision19" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(6518, -3189)
+scale = Vector2(25, 12)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision20" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(6654, -1753)
+scale = Vector2(37.5, 12)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision21" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(4295, -2743)
+scale = Vector2(47.5, 25)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision22" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(4306, -2376)
+scale = Vector2(25, 12.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision23" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(3128, -2540)
+scale = Vector2(12.5, 25)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision24" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(2241, -2569)
+scale = Vector2(25, 37.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision25" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(1660, -2445)
+scale = Vector2(37.5, 25)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision26" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(1885, -2086)
+scale = Vector2(37.5, 12.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision27" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(1885, -1854)
+scale = Vector2(12.5, 12.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision28" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(192, -2317)
+scale = Vector2(37.5, 25)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="tileCollision29" type="CollisionShape2D" parent="ground/tileStatic"]
+position = Vector2(318, -1975)
+scale = Vector2(25, 12.5)
+shape = SubResource("RectangleShape2D_gng0m")
+
+[node name="day" type="TileMap" parent="." groups=["day"]]
+visible = false
+tile_set = SubResource("TileSet_462ap")
+format = 2
+layer_0/tile_data = PackedInt32Array(-982405, 0, 0, -982390, 65536, 0, -1965430, 65536, 0, -2948470, 0, 0, 635, 65536, 0, 650, 65536, 0, 983675, 65536, 0, 1966715, 65536, 0, 2949755, 65536, 0, 2949770, 65536, 0, 1966730, 65536, 0, 983690, 65536, 0, -5176635, 0, 0, -5176620, 0, 0, -4193610, 0, 0, -4193565, 0, 0, -4193595, 65536, 0, -4193580, 65536, 0, -3210570, 65536, 0, -2227530, 65536, 0, -1244490, 65536, 0, -261450, 65536, 0, 721590, 65536, 0, 1704630, 65536, 0, 2687670, 65536, 0, 2687685, 65536, 0, 2687700, 65536, 0, 2687715, 65536, 0, 1704675, 65536, 0, 721635, 65536, 0, -261405, 65536, 0, -3210555, 65536, 0, -3210540, 65536, 0, -3210525, 65536, 0, -2227485, 65536, 0, -1244445, 65536, 0, -2227515, 65536, 0, -1244475, 65536, 0, -261435, 65536, 0, 721605, 65536, 0, 1704645, 65536, 0, 1704660, 65536, 0, 721620, 65536, 0, -261420, 65536, 0, -1244460, 65536, 0, -2227500, 65536, 0, 2687730, 65536, 0, 1704690, 0, 0, 2687745, 65536, 0, 1704705, 0, 0, 721665, 65536, 1, -261375, 65536, 1, -1244415, 65536, 0, -2227455, 65536, 0, -3210495, 65536, 0, -4193535, 65536, 0, -5176575, 65536, 0, -6159615, 65536, 0, -7142655, 0, 0, -7142640, 0, 0, -7142625, 0, 0, 721680, 65536, 1, -261360, 65536, 1, 721695, 65536, 1, -261345, 65536, 1, 2687760, 65536, 0, 2687775, 65536, 0, 1704720, 0, 0, 1704735, 0, 0, 1704750, 0, 0, 1704765, 0, 0, 2687790, 65536, 0, 2687805, 65536, 0, -1244400, 65536, 0, -1244385, 65536, 0, -2227425, 65536, 0, -3210465, 65536, 0, -4193505, 65536, 0, -5176545, 65536, 0, -6159585, 65536, 0, -6159600, 65536, 0, -5176560, 65536, 0, -4193520, 65536, 0, -3210480, 65536, 0, -2227440, 65536, 0, 721710, 65536, 1, 721725, 65536, 0, -261315, 65536, 0, -261330, 65536, 1, -7142610, 0, 0, -7142595, 0, 0, -6159570, 65536, 1, -6159555, 65536, 1, -5176530, 65536, 1, -5176515, 65536, 1, -4193490, 0, 0, -4193475, 0, 0, -2227410, 0, 0, -2227395, 0, 0, -1244370, 65536, 0, -1244355, 65536, 0, -3210450, 65536, 1, -3210435, 65536, 1, -1375383, 0, 0, -1375368, 0, 0, -1375353, 0, 0, -1375338, 65536, 0, -2358378, 65536, 0, -3341418, 65536, 0, -4324458, 0, 0, -4324443, 0, 0, -3341403, 65536, 0, -2358363, 65536, 0, -1375323, 65536, 0, -392283, 65536, 0, 590757, 65536, 0, 1573797, 65536, 0, 2556837, 65536, 0, 2556822, 65536, 0, -392343, 65536, 0, 590697, 65536, 0, 1573737, 65536, 0, 2556777, 65536, 0, 2556792, 65536, 0, 2556807, 65536, 0, 1573752, 65536, 0, 590712, 65536, 0, 1573767, 65536, 0, 1573782, 65536, 0, 590742, 65536, 0, -392298, 65536, 0, -392313, 65536, 0, 590727, 65536, 0, -392328, 65536, 0, -2358393, 65536, 1, -2358408, 65536, 1, -3341433, 65536, 1, -4324473, 0, 1, -2358423, 65536, 1, -3341463, 65536, 0, -4324503, 65536, 0, -4324488, 65536, 1, -3341448, 65536, 1, -5307543, 65536, 0, -6290583, 65536, 0, -7273623, 65536, 0, -8256663, 65536, 0, -9239703, 65536, 0, -10222743, 65536, 0, -11205783, 65536, 0, -12188823, 65536, 0, -13171863, 0, 0, -13171848, 0, 0, -13171833, 0, 0, -5307528, 65536, 0, -6290568, 65536, 0, -7273608, 65536, 0, -8256648, 65536, 0, -8256633, 65536, 0, -9239673, 65536, 0, -9239688, 65536, 0, -12188808, 65536, 0, -12188793, 65536, 0, -11205753, 65536, 0, -10222713, 65536, 0, -10222728, 65536, 0, -11205768, 65536, 0, -5307513, 65536, 1, -5307498, 65536, 1, -5307483, 65536, 1, -6290523, 65536, 1, -7273563, 65536, 1, -7273578, 65536, 1, -7273593, 65536, 1, -6290552, 65536, 1, -6290537, 65536, 1, -8256618, 65536, 0, -8256603, 65536, 0, -9239643, 65536, 0, -9239658, 65536, 0, -10222698, 65536, 0, -11205738, 65536, 0, -12188778, 0, 0, -10222683, 0, 0, -9239628, 0, 0)
+
+[node name="dayStatic" type="StaticBody2D" parent="day" groups=["day"]]
+
+[node name="dayCollision" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(10165, 200)
+scale = Vector2(12.5, 56)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision2" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(10409, 52)
+scale = Vector2(12.5, 89)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision3" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(11113, -140)
+scale = Vector2(12.5, 100)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision4" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(11471, -132)
+scale = Vector2(24.5, 125)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision5" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(11835, -140)
+scale = Vector2(12.5, 100)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision6" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(12650, 550)
+scale = Vector2(75, 25)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision7" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(12550, -1020.5)
+scale = Vector2(36.5, 84)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision8" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(13156, -1742.5)
+scale = Vector2(24, 11.9)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision9" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(13156, -1021.25)
+scale = Vector2(24, 12)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision10" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(13155, -420)
+scale = Vector2(24, 24)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision11" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(13275, 60)
+scale = Vector2(12, 24)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision12" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(14455, 195)
+scale = Vector2(60.5, 65)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision13" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(14455, 195)
+scale = Vector2(60.5, 65)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision14" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(14829, -525)
+scale = Vector2(25, 65)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision15" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(14087, -1826)
+scale = Vector2(25, 65)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision16" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(13982, -1330)
+scale = Vector2(12, 65)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision17" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(15334, -2554)
+scale = Vector2(150, 65)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision18" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(16094, -1074)
+scale = Vector2(150, 10)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="dayCollision19" type="CollisionShape2D" parent="day/dayStatic" groups=["day"]]
+position = Vector2(16630, -1602)
+scale = Vector2(12, 50)
+shape = SubResource("RectangleShape2D_c7g7h")
+disabled = true
+
+[node name="night" type="TileMap" parent="." groups=["night"]]
+tile_set = SubResource("TileSet_g1w8k")
+format = 2
+layer_0/tile_data = PackedInt32Array(3015268, 65536, 0, 3015283, 65536, 0, 2032228, 65536, 0, 2032243, 65536, 0, 1049203, 65536, 0, 1049188, 65536, 0, 66148, 65536, 0, 66163, 65536, 0, -916877, 65536, 0, -916892, 65536, 0, -916862, 65536, 0, -916847, 65536, 0, -916817, 65536, 0, 3015298, 65536, 0, 3015313, 65536, 0, 2032258, 65536, 0, 1049218, 65536, 0, 66178, 65536, 0, 66193, 65536, 0, 1049233, 65536, 0, 66223, 65536, 0, 2032273, 65536, 0, 3015328, 0, 0, 3015343, 0, 0, 3015358, 0, 0, 3015373, 0, 0, 66238, 65536, 0, 66253, 65536, 0, -916787, 65536, 0, -916802, 65536, 0, -1899857, 65536, 0, -2882897, 65536, 0, -3865937, 65536, 0, -1899887, 0, 0, -1899932, 0, 0, -1899917, 65536, 0, -1899902, 65536, 0, -2882956, 0, 0, -2882941, 0, 0, 3080956, 65536, 0, 3080971, 65536, 0, 2097916, 0, 0, 2097931, 0, 0, 3081010, 65536, 0, 2097970, 65536, 0, 1114930, 0, 0, 1114891, 65536, 1, 1114876, 65536, 1, 131836, 65536, 1, 131851, 65536, 1, -851204, 65536, 0, -851189, 65536, 0, -1834244, 0, 0, -1834229, 0, 0, 3081044, 65536, 0, 2098004, 65536, 0, 1114964, 65536, 0, 131924, 0, 0, 131890, 65536, 1, -1899842, 0, 0, -1899827, 0, 0, -2882820, 65536, 1, -2882805, 65536, 1, -3865860, 65536, 1, -3865845, 65536, 1, -4848900, 0, 0, -4848885, 0, 0, -4389979, 0, 0, -4389994, 0, 0, -3406954, 65536, 0, -2423914, 65536, 0, -1440874, 65536, 0, -457834, 65536, 0, 525206, 65536, 0, 1442710, 65536, 0, 2425750, 65536, 0, 2425765, 65536, 0, 2425780, 65536, 0, 1442740, 65536, 0, -3406924, 65536, 0, -3406939, 65536, 0, -2423899, 65536, 0, -2423884, 65536, 0, -1440859, 65536, 0, -1440844, 65536, 0, -457804, 65536, 0, -457819, 65536, 0, 525221, 65536, 0, 1442725, 65536, 0, 525236, 65536, 0, -3406909, 65536, 0, -3406894, 65536, 0, -3406879, 65536, 0, -3406864, 65536, 0, -3406849, 65536, 0, -3406834, 65536, 0, -2423869, 65536, 0, -2423854, 65536, 0, -2423839, 65536, 0, -2423824, 65536, 0, -2423809, 65536, 0, -2423794, 65536, 0, -1440829, 65536, 0, -1440814, 65536, 0, -1440799, 65536, 0, -1440784, 65536, 0, -1440769, 65536, 0, -1440754, 65536, 0, 2425795, 65536, 0, 1442755, 65536, 0, -457789, 65536, 0, 2425735, 65536, 0, 1442695, 65536, 0, 3408775, 65536, 0, 3408790, 65536, 0, 3408805, 65536, 0, 3408820, 65536, 0, 3408835, 65536, 0, 525251, 65536, 0, 525191, 65536, 0, -457849, 65536, 0, -1440889, 65536, 0, -2423929, 65536, 0, -3406969, 65536, 0, -4390009, 65536, 0, -5373049, 65536, 0, -6356089, 65536, 0, -7339129, 0, 0, -851116, 65536, 1, -1834156, 65536, 1, -2817196, 65536, 1, -3800236, 65536, 1, -4783276, 65536, 1, -5766316, 65536, 0, -6749356, 0, 0, -2817230, 65536, 1, -3800270, 65536, 1, -4783310, 65536, 1, -5766350, 0, 0, -4848977, 65536, 0, -5832017, 65536, 0, -6815057, 65536, 0, -7798097, 65536, 0, -851150, 65536, 1, -1834190, 0, 0, -8781137, 65536, 0, -9764177, 65536, 0, -10747217, 65536, 0)
+
+[node name="nightStatic" type="StaticBody2D" parent="night" groups=["night"]]
+
+[node name="nightCollision" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(9800, 160)
+scale = Vector2(12.5, 75)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision2" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(10525, 160)
+scale = Vector2(12.5, 75)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision3" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(10170, 175)
+scale = Vector2(25, 100)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision4" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(11105, 747)
+scale = Vector2(50, 12.5)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision5" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(12356, 646)
+scale = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision6" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(12356, -319)
+scale = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision7" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(11239, -210)
+scale = Vector2(37.5, 37.5)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision8" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(13093, 532)
+scale = Vector2(12.5, 37.5)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision9" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(11005, -1581)
+scale = Vector2(12.5, 100)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision10" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(13641, 410)
+scale = Vector2(12.5, 50)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision11" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(13098, -441)
+scale = Vector2(12.5, 12.5)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision12" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(12354, -1172)
+scale = Vector2(25, 12.5)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision13" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(13094, -1399)
+scale = Vector2(12.5, 12.5)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision14" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(13643, -1521)
+scale = Vector2(12.5, 25)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision15" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(14454, -412)
+scale = Vector2(12.5, 150)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision16" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(15584, -177)
+scale = Vector2(100, 100)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision17" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(15812, -2014)
+scale = Vector2(75, 12.5)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="nightCollision18" type="CollisionShape2D" parent="night/nightStatic" groups=["night"]]
+position = Vector2(16632, -1530)
+scale = Vector2(12.5, 75)
+shape = SubResource("RectangleShape2D_vk141")
+disabled = true
+
+[node name="endStatue" type="Area2D" parent="."]
+position = Vector2(0, 365)
+
+[node name="statueSprite" type="AnimatedSprite2D" parent="endStatue"]
+position = Vector2(0, -150)
+sprite_frames = SubResource("SpriteFrames_514ti")
+animation = &"unlit"
+
+[node name="statueCollision" type="CollisionShape2D" parent="endStatue"]
+shape = SubResource("RectangleShape2D_qthi1")
+
+[node name="saveStatue1" type="Area2D" parent="."]
+position = Vector2(1000, 125)
+
+[node name="statueSprite" type="AnimatedSprite2D" parent="saveStatue1"]
+position = Vector2(0, -150)
+sprite_frames = SubResource("SpriteFrames_514ti")
+animation = &"unlit"
+
+[node name="statueCollision" type="CollisionShape2D" parent="saveStatue1"]
+shape = SubResource("RectangleShape2D_qthi1")
+
+[node name="saveStatue2" type="Area2D" parent="."]
+position = Vector2(5150, -765)
+
+[node name="statueSprite" type="AnimatedSprite2D" parent="saveStatue2"]
+position = Vector2(0, -150)
+sprite_frames = SubResource("SpriteFrames_514ti")
+animation = &"unlit"
+
+[node name="statueCollision" type="CollisionShape2D" parent="saveStatue2"]
+shape = SubResource("RectangleShape2D_qthi1")
+
+[node name="saveStatue3" type="Area2D" parent="." groups=["day"]]
+visible = false
+position = Vector2(11475, -1480)
+
+[node name="statueSprite" type="AnimatedSprite2D" parent="saveStatue3" groups=["day"]]
+position = Vector2(0, -150)
+sprite_frames = SubResource("SpriteFrames_514ti")
+animation = &"unlit"
+
+[node name="statueCollision" type="CollisionShape2D" parent="saveStatue3" groups=["day"]]
+shape = SubResource("RectangleShape2D_qthi1")
+
+[node name="door" type="Area2D" parent="."]
+position = Vector2(-250, 365)
+
+[node name="doorSprite" type="AnimatedSprite2D" parent="door"]
+position = Vector2(1, -151)
+sprite_frames = SubResource("SpriteFrames_7cwvq")
+animation = &"closed"
+
+[node name="doorCollision" type="CollisionShape2D" parent="door"]
+shape = SubResource("RectangleShape2D_3srkq")
+
+[node name="memory" type="Area2D" parent="."]
+position = Vector2(800, -2100)
+script = ExtResource("27_lbtkm")
+
+[node name="memorySprite" type="Sprite2D" parent="memory"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("28_cwpnq")
+
+[node name="memoryShape" type="CollisionShape2D" parent="memory"]
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("CircleShape2D_l3f4a")
+
+[node name="player" type="CharacterBody2D" parent="."]
+z_index = 10
+position = Vector2(-250, 325)
+script = ExtResource("29_2wvkg")
+
+[node name="playerCollision" type="CollisionShape2D" parent="player"]
+position = Vector2(9, 23)
+shape = SubResource("RectangleShape2D_ij7wv")
+
+[node name="playerSprite" type="AnimatedSprite2D" parent="player"]
+sprite_frames = SubResource("SpriteFrames_0mih8")
+animation = &"leftJump"
+
+[node name="decor" type="Node" parent="."]
+
+[node name="StatueCh1_1" type="Sprite2D" parent="decor"]
+position = Vector2(3390, -313)
+rotation = -0.47822
+texture = ExtResource("35_eqq4v")
+
+[node name="StatueCh1_2" type="Sprite2D" parent="decor"]
+position = Vector2(4114, -142)
+rotation = 0.598648
+texture = ExtResource("35_eqq4v")
+
+[node name="StatueCh1_3" type="Sprite2D" parent="decor"]
+position = Vector2(4390, 811)
+rotation = 4.90787
+texture = ExtResource("35_eqq4v")
+
+[node name="StatueCh1_4" type="Sprite2D" parent="decor"]
+position = Vector2(5414, -486)
+rotation = -5.0248
+texture = ExtResource("35_eqq4v")
+
+[node name="StatueCh1_5" type="Sprite2D" parent="decor"]
+z_index = 2
+position = Vector2(7200, -600)
+rotation = -6.28319
+texture = ExtResource("35_eqq4v")
+
+[node name="StatueCh1_6" type="Sprite2D" parent="decor"]
+z_index = 2
+position = Vector2(8000, -600)
+rotation = -6.28319
+texture = ExtResource("35_eqq4v")
+
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(580, 325)
+script = ExtResource("32_7fl4r")
+
+[node name="tooltip" type="Label" parent="camera"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.5
+offset_top = -300.0
+offset_right = 108.5
+offset_bottom = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_pnj82")
+metadata/_edit_use_anchors_ = true
+
+[node name="cycle" type="Area2D" parent="." groups=["cycleCh1"]]
+position = Vector2(7600, -600)
+script = ExtResource("38_m38bd")
+
+[node name="cycleBg" type="Sprite2D" parent="cycle"]
+z_index = 5
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_l5jsj")
+
+[node name="cycleArrow" type="Sprite2D" parent="cycle"]
+z_index = 5
+rotation = 1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("38_qh3kx")
+
+[node name="cycleCollision" type="CollisionShape2D" parent="cycle"]
+scale = Vector2(11.5, 11.5)
+shape = SubResource("CircleShape2D_8pdhr")
+
+[node name="medallion" type="Sprite2D" parent="." groups=["day"]]
+position = Vector2(13000, 100)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("40_e6a35")
+script = ExtResource("41_4dn0j")
+
+[node name="mArea" type="Area2D" parent="medallion" groups=["day"]]
+
+[node name="mCollision" type="CollisionShape2D" parent="medallion/mArea" groups=["day"]]
+scale = Vector2(30, 30)
+shape = SubResource("CircleShape2D_1cwlm")
+
+[node name="nButton" type="Sprite2D" parent="." groups=["night"]]
+z_index = 5
+position = Vector2(15800, -1526)
+texture = ExtResource("41_rdr5p")
+script = ExtResource("44_4gwd4")
+
+[node name="nButtonArea" type="Area2D" parent="nButton" groups=["night"]]
+
+[node name="nButtonCollison" type="CollisionShape2D" parent="nButton/nButtonArea" groups=["night"]]
+scale = Vector2(25, 25)
+shape = SubResource("CircleShape2D_o3gys")
+disabled = true
+
+[node name="dButton" type="Sprite2D" parent="." groups=["day"]]
+visible = false
+z_index = 5
+position = Vector2(15800, -1526)
+texture = ExtResource("42_lrdew")
+script = ExtResource("46_64rlj")
+
+[node name="dButtonArea" type="Area2D" parent="dButton" groups=["day"]]
+
+[node name="dButtonCollision" type="CollisionShape2D" parent="dButton/dButtonArea" groups=["day"]]
+scale = Vector2(25, 25)
+shape = SubResource("CircleShape2D_ixk0p")
+disabled = true
+
+[node name="jumppad" type="Sprite2D" parent="." groups=["day"]]
+visible = false
+position = Vector2(12075, 207)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("44_f2cwd")
+script = ExtResource("46_xnuw1")
+
+[node name="jumpadArea" type="Area2D" parent="jumppad" groups=["day"]]
+
+[node name="jumppadCollision" type="CollisionShape2D" parent="jumppad/jumpadArea" groups=["day"]]
+shape = SubResource("RectangleShape2D_j4jkk")
+disabled = true
+
+[node name="jumppad2" type="Sprite2D" parent="." groups=["day"]]
+visible = false
+position = Vector2(14450, -545)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("44_f2cwd")
+script = ExtResource("46_xnuw1")
+
+[node name="jumpadArea" type="Area2D" parent="jumppad2" groups=["day"]]
+
+[node name="jumppadCollision" type="CollisionShape2D" parent="jumppad2/jumpadArea" groups=["day"]]
+shape = SubResource("RectangleShape2D_j4jkk")
+disabled = true
+
+[node name="jumppad3" type="Sprite2D" parent="." groups=["night"]]
+position = Vector2(11480, -675)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("44_f2cwd")
+script = ExtResource("46_xnuw1")
+
+[node name="jumpadArea" type="Area2D" parent="jumppad3" groups=["night"]]
+
+[node name="jumppadCollision" type="CollisionShape2D" parent="jumppad3/jumpadArea" groups=["night"]]
+shape = SubResource("RectangleShape2D_j4jkk")
+disabled = true
+
+[node name="jumppad4" type="Sprite2D" parent="."]
+position = Vector2(7485, -1400)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("44_f2cwd")
+script = ExtResource("46_xnuw1")
+
+[node name="jumpadArea" type="Area2D" parent="jumppad4" groups=["night"]]
+
+[node name="jumppadCollision" type="CollisionShape2D" parent="jumppad4/jumpadArea" groups=["night"]]
+shape = SubResource("RectangleShape2D_j4jkk")
+
+[connection signal="body_entered" from="endStatue" to="player" method="_on_end_statue_body_entered"]
+[connection signal="body_exited" from="endStatue" to="player" method="_on_end_statue_body_exited"]
+[connection signal="body_entered" from="saveStatue1" to="player" method="_on_save_statue_1_body_entered"]
+[connection signal="body_exited" from="saveStatue1" to="player" method="_on_save_statue_1_body_exited"]
+[connection signal="body_entered" from="saveStatue2" to="player" method="_on_save_statue_2_body_entered"]
+[connection signal="body_exited" from="saveStatue2" to="player" method="_on_save_statue_2_body_exited"]
+[connection signal="body_entered" from="saveStatue3" to="player" method="_on_save_statue_3_body_entered"]
+[connection signal="body_exited" from="saveStatue3" to="player" method="_on_save_statue_3_body_exited"]
+[connection signal="body_entered" from="door" to="player" method="_on_door_body_entered"]
+[connection signal="body_exited" from="door" to="player" method="_on_door_body_exited"]
+[connection signal="body_entered" from="memory" to="player" method="_on_memory_body_entered"]
+[connection signal="body_exited" from="memory" to="player" method="_on_memory_body_exited"]
+[connection signal="body_entered" from="cycle" to="player" method="_on_cycle_body_entered"]
+[connection signal="body_exited" from="cycle" to="player" method="_on_cycle_body_exited"]
+[connection signal="body_entered" from="medallion/mArea" to="player" method="_on_m_area_body_entered"]
+[connection signal="body_exited" from="medallion/mArea" to="player" method="_on_m_area_body_exited"]
+[connection signal="body_entered" from="nButton/nButtonArea" to="player" method="_on_n_button_area_body_entered"]
+[connection signal="body_exited" from="nButton/nButtonArea" to="player" method="_on_n_button_area_body_exited"]
+[connection signal="body_entered" from="dButton/dButtonArea" to="player" method="_on_d_button_area_body_entered"]
+[connection signal="body_exited" from="dButton/dButtonArea" to="player" method="_on_d_button_area_body_exited"]
